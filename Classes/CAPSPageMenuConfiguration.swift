@@ -35,6 +35,12 @@ public class CAPSPageMenuConfiguration {
     open var enableHorizontalBounce : Bool = true
     open var hideTopMenuBar : Bool = false
     
+    open var menuShadowRadius : CGFloat = 0
+    open var menuShadowOpacity : Float = 0
+    open var menuShadowColor : UIColor = UIColor.white
+    open var menuShadowOffset : CGFloat = 0
+    open var addBottomMenuShadow : Bool = false
+    
     public init() {
         
     }

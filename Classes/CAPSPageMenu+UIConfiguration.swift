@@ -60,12 +60,24 @@ extension CAPSPageMenu {
                 configuration.centerMenuItems = value
             case let .hideTopMenuBar(value):
                 configuration.hideTopMenuBar = value
+                
+            case let .menuShadowRadius(value):
+                configuration.menuShadowRadius = value
+            case let .menuShadowOpacity(value):
+                configuration.menuShadowOpacity = value
+            case let .menuShadowColor(value):
+                configuration.menuShadowColor = value
+            case let .menuShadowOffset(value):
+                configuration.menuShadowOffset = value
+            case let .addBottomMenuShadow(value):
+                configuration.addBottomMenuShadow = value
             }
         }
         
         if configuration.hideTopMenuBar {
             configuration.addBottomMenuHairline = false
             configuration.menuHeight = 0.0
+            configuration.addBottomMenuShadow = false
         }
     }
     
@@ -116,6 +128,14 @@ extension CAPSPageMenu {
             self.view.addConstraints(menuBottomHairline_constraint_V)
             
             menuBottomHairline.backgroundColor = configuration.bottomMenuHairlineColor
+        }
+        
+        if configuration.addBottomMenuShadow {
+            menuScrollView.layer.shadowColor = configuration.menuShadowColor.cgColor
+            menuScrollView.layer.shadowRadius = configuration.menuShadowRadius
+            menuScrollView.layer.shadowOpacity = configuration.menuShadowOpacity
+            menuScrollView.layer.shadowOffset = CGSize(width: 0, height: configuration.menuShadowOffset)
+            menuScrollView.layer.masksToBounds = false
         }
         
         // Disable scroll bars

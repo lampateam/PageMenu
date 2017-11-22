@@ -44,4 +44,10 @@ public enum CAPSPageMenuOption {
     case scrollAnimationDurationOnMenuItemTap(Int)
     case centerMenuItems(Bool)
     case hideTopMenuBar(Bool)
+    
+    case menuShadowRadius(CGFloat)
+    case menuShadowOpacity(Float)
+    case menuShadowColor(UIColor)
+    case menuShadowOffset(CGFloat)
+    case addBottomMenuShadow(Bool)
 }
