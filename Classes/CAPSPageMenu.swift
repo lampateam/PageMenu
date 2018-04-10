@@ -24,6 +24,8 @@ import UIKit
 
     @objc optional func willMoveToPage(_ controller: UIViewController, index: Int)
     @objc optional func didMoveToPage(_ controller: UIViewController, index: Int)
+    @objc optional func itemClicked(index: Int)
+    @objc optional func didScrollToItem(index: Int)
 }
 
 open class CAPSPageMenu: UIViewController {

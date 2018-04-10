@@ -97,6 +97,8 @@ extension CAPSPageMenu : UIScrollViewDelegate {
                             lastPageIndex = currentPageIndex
                             currentPageIndex = page
                             
+                            delegate?.didScrollToItem?(index: page)
+                            
                             if pagesAddedDictionary[page] != page && page < controllerArray.count && page >= 0 {
                                 addPageAtIndex(page)
                                 pagesAddedDictionary[page] = page

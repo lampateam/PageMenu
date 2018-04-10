@@ -19,6 +19,9 @@ extension CAPSPageMenu : UIGestureRecognizerDelegate {
             
             if configuration.useMenuLikeSegmentedControl {
                 itemIndex = Int(tappedPoint.x / (self.view.frame.width / CGFloat(controllerArray.count)))
+                
+                delegate?.itemClicked?(index: itemIndex)
+                
             } else if configuration.menuItemWidthBasedOnTitleTextWidth {
                 // Base case being first item
                 var menuItemLeftBound : CGFloat = 0.0
