@@ -75,7 +75,6 @@ extension CAPSPageMenu {
             case let .isEnableLandscapeOrientation(value):
                 configuration.isEnableLandscapeOrientation = value
             }
-            }
         }
         
         if configuration.hideTopMenuBar {
