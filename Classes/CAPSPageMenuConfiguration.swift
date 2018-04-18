@@ -41,6 +41,8 @@ public class CAPSPageMenuConfiguration {
     open var menuShadowOffset : CGFloat = 0
     open var addBottomMenuShadow : Bool = false
     
+    open var isEnableLandscapeOrientation : Bool = false
+    
     public init() {
         
     }

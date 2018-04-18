@@ -71,6 +71,10 @@ extension CAPSPageMenu {
                 configuration.menuShadowOffset = value
             case let .addBottomMenuShadow(value):
                 configuration.addBottomMenuShadow = value
+                
+            case let .isEnableLandscapeOrientation(value):
+                configuration.isEnableLandscapeOrientation = value
+            }
             }
         }
         

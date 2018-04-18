@@ -50,4 +50,6 @@ public enum CAPSPageMenuOption {
     case menuShadowColor(UIColor)
     case menuShadowOffset(CGFloat)
     case addBottomMenuShadow(Bool)
+    
+    case isEnableLandscapeOrientation(Bool)
 }
