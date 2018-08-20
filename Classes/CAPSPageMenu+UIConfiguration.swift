@@ -42,6 +42,8 @@ extension CAPSPageMenu {
                 configuration.menuItemSeparatorRoundEdges = value
             case let .menuItemFont(value):
                 configuration.menuItemFont = value
+            case let .selectedMenuItemFont(value):
+                configuration.selectedMenuItemFont = value
             case let .menuItemSeparatorPercentageHeight(value):
                 configuration.menuItemSeparatorPercentageHeight = value
             case let .menuItemWidth(value):
@@ -249,6 +251,7 @@ extension CAPSPageMenu {
         if menuItems.count > 0 {
             if menuItems[currentPageIndex].titleLabel != nil {
                 menuItems[currentPageIndex].titleLabel!.textColor = configuration.selectedMenuItemLabelColor
+                menuItems[currentPageIndex].titleLabel?.font = configuration.selectedMenuItemFont
             }
         }
         
